@@ -18,7 +18,7 @@ Como foi desenvolvido:
 
 - Criar primeiramente a camada de encriptação e a camada de decriptação juntas. Como são 3 camadas, a primeira de encriptação é a terceira de decriptação e vice-versa.
 
-Obs: Motivo principal de ter sido realizado dessa forma, além da organização é que se não houvesse tempo necessário, pelo menos seria possível de realizar a encriptação e a realização da palavra
+Obs: Motivo principal de ter sido realizado dessa forma, além da organização é que se não houvesse tempo necessário, pelo menos seria possível de realizar a encriptação e a decriptação corretamente da palavra
 
 - Foram feitos commits para cada função criada
 - Terceiro passo foi exportar as funções completas

@@ -20,7 +20,7 @@ const thirdDecryption = (wordToBeDecrypted) => {
   return hash.join('');
 };
 
-const secondeDecryption = (wordToBeEncrypted) => {
+const secondEncryption = (wordToBeEncrypted) => {
   const wordArray = wordToBeEncrypted.split('');
   const reverseWordArray = wordArray.reverse();
   return reverseWordArray.join('');

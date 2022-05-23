@@ -9,6 +9,17 @@ const firstEncryption = (wordToBeEncrypted) => {
   return hash.join('');
 };
 
+const thirdDecryption = (wordToBeDecrypted) => {
+  const wordArray = wordToBeDecrypted.split('');
+  const vinNumberLength = wordArray.length;
+  const hash = wordArray.map((_charactere, index) => {
+    const charactereCode = wordToBeDecrypted.charCodeAt(index);
+    const encryptedCharacterCode = charactereCode - vinNumberLength;
+    return String.fromCharCode(encryptedCharacterCode);
+  });
+  return hash.join('');
+};
+
 const crypto = (word) => {
   let wordEncrypted = word;
   wordEncrypted = firstEncryption(wordEncrypted);

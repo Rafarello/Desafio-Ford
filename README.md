@@ -29,4 +29,4 @@ Linter
 
 Testes
 
-- Foi realizada uma verificação de uma encriptação e decriptação de uma palavra, onde espera-se que seja igual a palavra inicial
+- Foi realizada uma verificação de uma encriptação e decriptação de uma palavra utilizando as funções criadas anteriormente, onde espera-se que o retorno seja igual a palavra inicial

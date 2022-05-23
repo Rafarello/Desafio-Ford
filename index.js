@@ -34,7 +34,7 @@ const secondDecryption = (wordToBeDecrypted) => {
 
 const thirdEncryption = (wordToBeEncrypted) => {
   const wordArray = wordToBeEncrypted.split('');
-  const hash = wordArray.map((charactere, index) => {
+  const hash = wordArray.map((charactere) => {
     const charUpperCase = charactere.toUpperCase();
     const charLowerCase = charactere.toLowerCase();
     let letterToBeEncrypted = charactere;
@@ -84,4 +84,9 @@ const decrypto = (hash) => {
   wordDecrypted = secondDecryption(wordDecrypted);
   wordDecrypted = thirdDecryption(wordDecrypted);
   return wordDecrypted;
+};
+
+module.exports = {
+  crypto,
+  decrypto,
 };

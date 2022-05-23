@@ -46,6 +46,26 @@ const thirdEncryption = (wordToBeEncrypted) => {
       }
       return letterToBeEncrypted;
     }
+    return charactere;
+  });
+  return hash.join('');
+};
+
+const firstDecryption = (wordToBeDecrypted) => {
+  const wordArray = wordToBeDecrypted.split('');
+  const hash = wordArray.map((charactere) => {
+    const charUpperCase = charactere.toUpperCase();
+    const charLowerCase = charactere.toLowerCase();
+    let letterToBeEncrypted = charactere;
+    if (charUpperCase !== charLowerCase) {
+      if (charactere === charUpperCase) {
+        letterToBeEncrypted = charLowerCase;
+      } else {
+        letterToBeEncrypted = charUpperCase;
+      }
+      return letterToBeEncrypted;
+    }
+    return charactere;
   });
   return hash.join('');
 };
@@ -54,11 +74,13 @@ const crypto = (word) => {
   let wordEncrypted = word;
   wordEncrypted = firstEncryption(wordEncrypted);
   wordEncrypted = secondEncryption(wordEncrypted);
+  wordEncrypted = thirdEncryption(wordEncrypted);
   return wordEncrypted;
 };
 
 const decrypto = (hash) => {
   let wordDecrypted = hash;
+  wordDecrypted = firstDecryption(wordDecrypted);
   wordDecrypted = secondDecryption(wordDecrypted);
   wordDecrypted = thirdDecryption(wordDecrypted);
   return wordDecrypted;

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { crypto, decrypto } = require('./index');
 
 test('Testa encriptação e decriptação', () => {

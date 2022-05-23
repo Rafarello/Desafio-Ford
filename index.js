@@ -32,6 +32,24 @@ const secondDecryption = (wordToBeDecrypted) => {
   return reverseWordArray.join('');
 };
 
+const thirdEncryption = (wordToBeEncrypted) => {
+  const wordArray = wordToBeEncrypted.split('');
+  const hash = wordArray.map((charactere, index) => {
+    const charUpperCase = charactere.toUpperCase();
+    const charLowerCase = charactere.toLowerCase();
+    let letterToBeEncrypted = charactere;
+    if (charUpperCase !== charLowerCase) {
+      if (charactere === charUpperCase) {
+        letterToBeEncrypted = charLowerCase;
+      } else {
+        letterToBeEncrypted = charUpperCase;
+      }
+      return letterToBeEncrypted;
+    }
+  });
+  return hash.join('');
+};
+
 const crypto = (word) => {
   let wordEncrypted = word;
   wordEncrypted = firstEncryption(wordEncrypted);

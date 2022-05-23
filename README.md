@@ -27,3 +27,6 @@ Linter
 
 - Foi utilizado o EsLint como ferramenta de qualidade de código com enforçamento de estilo de código do AirBnb.
 
+Testes
+
+- Foi realizada uma verificação de uma encriptação e decriptação de uma palavra, onde espera-se que seja igual a palavra inicial

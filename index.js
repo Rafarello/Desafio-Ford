@@ -26,15 +26,22 @@ const secondEncryption = (wordToBeEncrypted) => {
   return reverseWordArray.join('');
 };
 
+const secondDecryption = (wordToBeDecrypted) => {
+  const wordArray = wordToBeDecrypted.split('');
+  const reverseWordArray = wordArray.reverse();
+  return reverseWordArray.join('');
+};
+
 const crypto = (word) => {
   let wordEncrypted = word;
   wordEncrypted = firstEncryption(wordEncrypted);
-  wordEncrypted
+  wordEncrypted = secondEncryption(wordEncrypted);
   return wordEncrypted;
 };
 
 const decrypto = (hash) => {
   let wordDecrypted = hash;
+  wordDecrypted = secondDecryption(wordDecrypted);
   wordDecrypted = thirdDecryption(wordDecrypted);
   return wordDecrypted;
 };
